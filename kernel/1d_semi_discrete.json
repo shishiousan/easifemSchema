@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "$comment": "This schema is written for config file for semi-discrete kernel",
+  "required": [
+    "kernel"
+  ],
+  "properties": {
+    "kernel": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "type": "string"
+        },
+        "baseInterpolationForSpace": {
+          "type": "string"
+        },
+        "density": {
+          "type": "integer"
+        },
+        "elasticModulus": {
+          "type": "integer"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "maxIterNumNR": {
+          "type": "integer"
+        },
+        "newmark": {
+          "type": "object",
+          "properties": {
+            "beta": {
+              "type": "number"
+            },
+            "gamma": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "beta",
+            "gamma"
+          ]
+        },
+        "outputFreq": {
+          "type": "integer"
+        },
+        "plasticModulus": {
+          "type": "integer"
+        },
+        "plotData": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "plotQPData": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "quadTypeForSpace": {
+          "type": "string"
+        },
+        "result_dir": {
+          "type": "string"
+        },
+        "updateTanmat": {
+          "type": "boolean"
+        },
+        "saveData": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "saveQPData": {
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "spaceDomain": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "spaceElemLength": {
+          "type": "number"
+        },
+        "spaceOrder": {
+          "type": "integer"
+        },
+        "timeRange": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "timeStepSize": {
+          "type": "number"
+        },
+        "toleranceForNR": {
+          "type": "number"
+        },
+        "totalSpaceElements": {
+          "type": "integer"
+        },
+        "totalSpaceNodes": {
+          "type": "integer"
+        },
+        "totalTimeSteps": {
+          "type": "integer"
+        },
+        "initialDisp": {
+          "$ref": "#/definitions/function"
+        },
+        "initialVel": {
+          "$ref": "#/definitions/function"
+        },
+        "tractionLeft": {
+          "$ref": "#/definitions/function"
+        },
+        "velocityRight": {
+          "$ref": "#/definitions/function"
+        },
+        "verbosity": {
+          "type": "integer"
+        },
+        "yieldStress": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "function": {
+      "type": "object",
+      "properties": {
+        "argType": {
+          "type": "string"
+        },
+        "luaFunctionName": {
+          "type": "string"
+        },
+        "luaScript": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "numArgs": {
+          "type": "integer"
+        },
+        "numReturns": {
+          "type": "integer"
+        },
+        "returnType": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
