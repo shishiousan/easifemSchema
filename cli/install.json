@@ -1,0 +1,88 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/easifem/easifemGO/cmd/pkg",
+ "$ref": "#/$defs/Pkg",
+ "$defs": {
+  "Pkg": {
+   "properties": {
+    "BuildDir": {
+     "type": "string"
+    },
+    "BuildOptions": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "BuildSharedLibs": {
+     "type": "boolean"
+    },
+    "BuildStaticLibs": {
+     "type": "boolean"
+    },
+    "BuildSystem": {
+     "type": "string"
+    },
+    "BuildType": {
+     "type": "string"
+    },
+    "CmakePrefixPath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "Dependencies": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "EnvVars": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "type": "object"
+    },
+    "Git": {
+     "type": "string"
+    },
+    "InstallDir": {
+     "type": "string"
+    },
+    "IsActive": {
+     "type": "boolean"
+    },
+    "IsExtPkg": {
+     "type": "boolean"
+    },
+    "LdLibraryPath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "License": {
+     "type": "string"
+    },
+    "Name": {
+     "type": "string"
+    },
+    "RunTest": {
+     "type": "boolean"
+    },
+    "SourceDir": {
+     "type": "string"
+    },
+    "TargetName": {
+     "type": "string"
+    },
+    "Url": {
+     "type": "string"
+    }
+   },
+   "additionalProperties": false,
+   "type": "object"
+  }
+ }
+}

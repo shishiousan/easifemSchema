@@ -1,0 +1,100 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/easifem/easifemGO/cmd/runner",
+ "$ref": "#/$defs/Runner",
+ "$defs": {
+  "Runner": {
+   "properties": {
+    "BuildDir": {
+     "type": "string"
+    },
+    "BuildType": {
+     "type": "string"
+    },
+    "CMakeMinimumVersion": {
+     "type": "string"
+    },
+    "Compiler": {
+     "type": "string"
+    },
+    "CompilerPath": {
+     "type": "string"
+    },
+    "ExtraCMakePrefixPath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "ExtraIncludePath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "ExtraLibs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "FileName": {
+     "type": "string"
+    },
+    "ExtraFileNames": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "Flags": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "IncludePath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "Language": {
+     "type": "string"
+    },
+    "LibraryPath": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "ProjectName": {
+     "type": "string"
+    },
+    "SourceDir": {
+     "type": "string"
+    },
+    "TargetLibs": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "TargetName": {
+     "type": "string"
+    },
+    "IsExecute": {
+     "type": "boolean"
+    },
+    "CacheClean": {
+     "type": "boolean"
+    },
+    "ReBuild": {
+     "type": "boolean"
+    }
+   },
+   "additionalProperties": false,
+   "type": "object"
+  }
+ }
+}
